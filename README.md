@@ -6,7 +6,7 @@
 
 Combining it with CMake, you can manage dependencies for your C++ projects like using `cargo` for Rust. However, it's still not as good as `cargo` tho, but basically not bad as we have for C++ now in my opinion.
 
-One of the most downside of `vcpkg` compared to `cargo` is the tricky init setup process to build run and debug your project in IDEs like CLion, Visual Studio, etc. So I create this repo to reserve the setup process for my future projects.
+One of the most downside of `vcpkg` compared to `cargo` is the tricky init setup process to build run and debug your project in IDEs. So I create this repo to reserve the setup process for my future projects' use.
 
 ## Prerequisites
 
