@@ -1,0 +1,31 @@
+# Ignore build artifacts
+/build/
+/out/
+/bin/
+/obj/
+/cmake-build-debug/
+
+# Ignore dependency directories
+/deps/
+/vcpkg_installed/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE specific files
+.idea/
+
+# Ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore compiled files
+*.o
+*.a
+*.so
+*.exe
+*.dll
+*.lib
+*.dylib
