@@ -1,6 +1,6 @@
 # A template profile config for using vcpkg for C++ projects
 
-[vcpkg](https://github.com/microsoft/vcpkg) is a package manager for C++ libraries, it's maintained by Microsoft.
+[vcpkg](https://github.com/microsoft/vcpkg) is a package manager for C++ maintained by Microsoft.
 
 ## Prerequisites
 
