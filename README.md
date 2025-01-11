@@ -24,5 +24,7 @@ export PATH=$PATH:$VCPKG_ROOT
 2. Go to File → Settings → Build, Execution, Deployment → CMake (or CLion Preferences on macOS). 
 3. In the CMake Profiles section:
    1. Select your active profile (e.g., Debug or Release). 
-   2. In the CMake Options field, add:
-      `-DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake`
+   2. In the CMake Options field, add: 
+```text
+   -DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake
+```
