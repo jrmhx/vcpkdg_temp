@@ -2,15 +2,27 @@
 
 [vcpkg](https://github.com/microsoft/vcpkg) is a package manager for C++ maintained by Microsoft.
 
-## Prerequisites
+## Install and Setup vcpkg
+[install vcpkg and set up cmake profiles](https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode?pivots=shell-bash)
 
-- [install vcpkg and set up cmake profiles](https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode?pivots=shell-bash)
-- [install CLion](https://www.jetbrains.com/clion/download/)
+```bash
+git clone https://github.com/microsoft/vcpkg.git
+cd vcpkg
+./bootstrap-vcpkg.sh
+```
 
-## Setup in JetBrains CLion
+add the export command to your shell's profile script (e.g., ~/.bashrc or ~/.zshrc).
 
-- Open the project in CLion
-- Go to `File` -> `Settings` -> `Build, Execution, Deployment` -> `CMake`
-- Enable `default` profile
-- In `Debug` profile, add `-DCMAKE_TOOLCHAIN_FILE=<path-to-vcpkg>/scripts/buildsystems/vcpkg.cmake` to `CMake options`
-- Apply the changes
+```bash
+export VCPKG_ROOT=/the/actual/path/to/vcpkg
+export PATH=$PATH:$VCPKG_ROOT
+```
+
+## Setup in CLion
+
+1. Open the project in CLion
+2. Go to File → Settings → Build, Execution, Deployment → CMake (or CLion Preferences on macOS). 
+3. In the CMake Profiles section:
+   1. Select your active profile (e.g., Debug or Release). 
+   2. In the CMake Options field, add:
+      `-DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake`
