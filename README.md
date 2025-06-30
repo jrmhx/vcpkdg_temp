@@ -1,7 +1,5 @@
 # A template profile config for using vcpkg for C++ projects
 
-[vcpkg](https://github.com/microsoft/vcpkg) is a package manager for C++ maintained by Microsoft.
-
 ## Install and Setup vcpkg
 [install vcpkg and set up cmake profiles](https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode?pivots=shell-bash)
 
@@ -18,13 +16,6 @@ export VCPKG_ROOT=/the/actual/path/to/vcpkg
 export PATH=$PATH:$VCPKG_ROOT
 ```
 
-## Setup in CLion
-
-1. Open the project in CLion
-2. Go to File → Settings → Build, Execution, Deployment → CMake (or CLion Preferences on macOS). 
-3. In the CMake Profiles section:
-   1. Select your active profile (e.g., Debug or Release). 
-   2. In the CMake Options field, add: 
 ```text
    -DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake
 ```
